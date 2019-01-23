@@ -1,8 +1,4 @@
-# Blockchain APIs for bitcore
-
-[![NPM Package](https://img.shields.io/npm/v/bitcore-explorers.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-explorers)
-[![Build Status](https://img.shields.io/travis/bitpay/bitcore-explorers.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcore-explorers)
-[![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcore-explorers.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcore-explorers)
+# Bitcore Insights
 
 A module for [bitcore](https://github.com/bitpay/bitcore) that implements HTTP requests to different Web APIs to query the state of the blockchain.
 
@@ -11,8 +7,8 @@ A module for [bitcore](https://github.com/bitpay/bitcore) that implements HTTP r
 Be careful! When using this module, the information retrieved from remote servers may be compromised and not reflect the actual state of the blockchain.
 
 ```sh
-npm install bitcore-explorers
-bower install bitcore-explorers
+npm install bitcore-insight
+bower install bitcore-insight
 ```
 ## Insight
 ### Description
@@ -24,9 +20,8 @@ This Insight module allows you to:
 
 #### Retrieving Unspent UTXOs for an Address (or set of)
 ```javascript
-const explorers = require('bitcore-explorers');
-const insight = new explorers.Insight();
-
+const Insight = require('bitcore-insight').Insight;
+let insight = new Insight('testnet');
 // Create a transaction
 insight.getUtxos('Bitcoin Address From', (err, utxos) => {
   if (err) {
@@ -49,8 +44,8 @@ utxos: {
 
 #### Retrieving Transactions and Balance of an Address
 ```javascript
-const explorers = require('bitcore-explorers');
-const insight = new explorers.Insight();
+const Insight = require('bitcore-insight').Insight;
+let insight = new Insight('testnet');
 
 // Create a transaction
 insight.address('Bitcoin Address', (err, address) => {
@@ -79,8 +74,8 @@ address: {
 
 #### Retrieving Transaction by Transaction ID
 ```javascript
-const explorers = require('bitcore-explorers');
-const insight = new explorers.Insight();
+const Insight = require('bitcore-insight').Insight;
+let insight = new Insight('testnet');
 
 // Create a transaction
 insight.getTransaction('Bitcoin Transaction Id', (err, txid) => {
@@ -152,8 +147,8 @@ txid: {
 #### Broadcasting a Transaction
 
 ```javascript
-const explorers = require('bitcore-explorers');
-const insight = new explorers.Insight();
+const Insight = require('bitcore-insight').Insight;
+let insight = new Insight('testnet');
 
 // Sending the transaction to the Bitcoin network
 

@@ -1,8 +1,8 @@
 {
-  "name": "bitcore-explorers",
-  "main": "/bitcore-explorers.min.js",
-  "version": "1.0.1",
-  "homepage": "https://github.com/bitpay/bitcore-explorers",
+  "name": "bitcore-insight",
+  "main": "/bitcore-insight.min.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/abel30567/bitcore-insight",
   "authors": [
     "BitPay"
   ],
